@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>مركز إقرأ التعليمي</title>
+  <meta name="description" content="مركز إقرأ التعليمي — مركز تعليمي ثقافي يصنع الفرق. نمنح طلابنا مساحة دافئة للتعلم والثقافة وتنمية المهارات.">
+  <meta name="theme-color" content="#12402C">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Cairo:wght@400;700&display=swap">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preload" as="image" href="assets/images/hero-library.jpg">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">انتقل إلى المحتوى</a>
+
+  <!-- Icon sprite (original line icons) -->
+  <svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <symbol id="i-open-book" viewBox="0 0 24 24"><path d="M12 6.5C10 5 7 4.5 3 5v13c4-.5 7 0 9 1.5 2-1.5 5-2 9-1.5V5c-4-.5-7 0-9 1.5Z"/><path d="M12 6.5v13"/></symbol>
+      <symbol id="i-landmark" viewBox="0 0 24 24"><path d="M12 3 20 8H4Z"/><path d="M4 11h16M6 11v7M10 11v7M14 11v7M18 11v7M3 21h18"/></symbol>
+      <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3Z"/></symbol>
+      <symbol id="i-medal" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.6 14 7 22l5-3 5 3-1.6-8"/><path d="m12 6.3.9 1.8 2 .3-1.45 1.4.35 2-1.8-.95-1.8.95.35-2L9.1 8.4l2-.3Z"/></symbol>
+      <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-8M12 8v13"/><path d="M12 8C10.5 5 7.5 4.5 7.5 6.5S10 8 12 8Zm0 0c1.5-3 4.5-3.5 4.5-1.5S14 8 12 8Z"/></symbol>
+      <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 20h18"/><path d="m5 16 4-5 3 3 6-7"/><path d="M15 7h3v3"/></symbol>
+      <symbol id="i-books" viewBox="0 0 24 24"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v14H6.5A2.5 2.5 0 0 0 4 19.5Z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H19v-5"/><path d="M8.5 7.5h6M8.5 11h4"/></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="m9 15.5 2 2 4-4"/></symbol>
+      <symbol id="i-video" viewBox="0 0 24 24"><rect x="2" y="4.5" width="20" height="14" rx="3"/><path d="M10 8.8v5.4l4.6-2.7Z"/><path d="M8 21.5h8"/></symbol>
+      <symbol id="i-laptop" viewBox="0 0 24 24"><path d="M5 5h14a1 1 0 0 1 1 1v10H4V6a1 1 0 0 1 1-1Z"/><path d="M2 19h20"/><path d="m8 10 4-2 4 2-4 2Z"/><path d="M10 11v1.8c1.2.8 2.8.8 4 0V11"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 5 5L14 13l5 2v3a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- ============ Header ============ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="مركز إقرأ التعليمي — الرئيسية">
+        <img src="assets/logo.svg" alt="" width="44" height="44">
+        <span class="brand-name">إقرأ</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="فتح القائمة">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <div class="site-menu" id="site-menu">
+        <nav aria-label="القائمة الرئيسية">
+          <ul class="nav-list">
+            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#about">عن إقرأ</a></li>
+            <li><a href="#why">لماذا نحن</a></li>
+            <li><a href="#programs">البرامج</a></li>
+            <li><a href="#gallery">معرضنا</a></li>
+            <li><a href="#contact">تواصل معنا</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a class="btn btn-amber btn-sm" href="#booking">احجز تقييمًا مجانيًا</a>
+          <a class="btn btn-outline btn-sm" href="#" data-link="payment">ادفع الآن</a>
+          <a class="btn btn-outline btn-sm" href="https://wa.me/970595112532" target="_blank" rel="noopener">تواصل عبر واتساب</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ 1) Hero ============ -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="badge">مركز تعليمي ثقافي يصنع الفرق</p>
+          <h1 id="hero-title">
+            <span class="h1-line">حيث يبدأ الإبداع...</span>
+            <span class="h1-line text-gold">وتنمو العقول</span>
+          </h1>
+          <p class="hero-lead">في مركز إقرأ نمنح طلابنا مساحة دافئة للتعلم والثقافة وتنمية المهارات، ليكتشف كل طالب قدراته بثقة ومتعة.</p>
+          <div class="hero-actions">
+            <a class="btn btn-amber" href="#programs">اكتشف برامجنا</a>
+            <a class="btn btn-outline" href="#contact">تواصل معنا</a>
+          </div>
+        </div>
+
+        <figure class="hero-media">
+          <div class="arch-frame">
+            <img src="assets/images/hero-library.jpg" alt="ممر مكتبة دافئ الإضاءة تصطف على جانبيه رفوف الكتب" width="900" height="1100" fetchpriority="high">
+          </div>
+          <span class="hero-star" aria-hidden="true"></span>
+          <figcaption>بيئة تتسع للأفكار الجميلة</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ 2) About ============ -->
+    <section class="section section-light" id="about" aria-labelledby="about-title">
+      <div class="container narrow">
+        <div class="section-head">
+          <h2 id="about-title">عن إقرأ</h2>
+        </div>
+        <p class="about-text">مركز إقرأ التعليمي مركزٌ تعليمي ثقافي يصنع الفرق. نؤمن بأن التعلّم يزدهر حين يجد الطالب مساحة دافئة تحتضنه، لذلك نمنح طلابنا بيئة تجمع بين التعلّم والثقافة وتنمية المهارات، ليكتشف كل طالب قدراته بثقة ومتعة.</p>
+        <ul class="pillars">
+          <li><span class="pillar-icon" aria-hidden="true"><svg><use href="#i-open-book"/></svg></span>التعلّم</li>
+          <li><span class="pillar-icon" aria-hidden="true"><svg><use href="#i-landmark"/></svg></span>الثقافة</li>
+          <li><span class="pillar-icon" aria-hidden="true"><svg><use href="#i-bulb"/></svg></span>تنمية المهارات</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 3) Why us (VIP benefits) ============ -->
+    <section class="section section-dark has-pattern" id="why" aria-labelledby="why-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">مزايا بطاقة VIP</p>
+          <h2 id="why-title">لماذا نحن</h2>
+        </div>
+        <ul class="cards cards-3">
+          <li class="card card-ornate">
+            <span class="card-icon" aria-hidden="true"><svg><use href="#i-medal"/></svg></span>
+            <h3>أولوية التسجيل في المواد والمحاضرات</h3>
+          </li>
+          <li class="card card-ornate">
+            <span class="card-icon" aria-hidden="true"><svg><use href="#i-gift"/></svg></span>
+            <h3>عروض خاصة يحددها المركز</h3>
+          </li>
+          <li class="card card-ornate">
+            <span class="card-icon" aria-hidden="true"><svg><use href="#i-chart"/></svg></span>
+            <h3>متابعة تعليمية مميزة</h3>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 4) Programs ============ -->
+    <section class="section section-cream" id="programs" aria-labelledby="programs-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">البرامج</p>
+          <h2 id="programs-title">خدمات مركز إقرأ</h2>
+        </div>
+        <ul class="cards cards-4">
+          <li class="card service-card">
+            <span class="service-icon" aria-hidden="true"><svg><use href="#i-books"/></svg></span>
+            <h3>مواد تعليمية</h3>
+          </li>
+          <li class="card service-card">
+            <span class="service-icon" aria-hidden="true"><svg><use href="#i-calendar"/></svg></span>
+            <h3>تسجيل حضوري وعن بُعد</h3>
+          </li>
+          <li class="card service-card">
+            <span class="service-icon" aria-hidden="true"><svg><use href="#i-video"/></svg></span>
+            <h3>محاضرات إلكترونية</h3>
+          </li>
+          <li class="card service-card">
+            <span class="service-icon" aria-hidden="true"><svg><use href="#i-laptop"/></svg></span>
+            <h3>تدريس إلكتروني</h3>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 5) VIP card ============ -->
+    <section class="section section-vip has-pattern" id="vip" aria-labelledby="vip-title">
+      <div class="container vip-layout">
+        <div class="vip-card">
+          <div class="vip-card-inner">
+            <div class="vip-top">
+              <span class="vip-brand"><img src="assets/logo.svg" alt="" width="34" height="34"> إقرأ</span>
+              <span class="vip-chip" aria-hidden="true"></span>
+            </div>
+            <h2 class="vip-title" id="vip-title"><span class="vip-word" dir="ltr">VIP</span> — للطلاب المميزين</h2>
+            <dl class="vip-fields">
+              <div class="vip-field vip-field-name">
+                <dt>اسم الطالب</dt>
+                <dd><span class="vip-blank" aria-hidden="true"></span></dd>
+              </div>
+              <div class="vip-field">
+                <dt>رقم البطاقة:</dt>
+                <dd><bdi>IQRA-VIP-0001</bdi></dd>
+              </div>
+              <div class="vip-field">
+                <dt>تاريخ الإصدار</dt>
+                <dd><span class="vip-blank vip-blank-short" aria-hidden="true"></span></dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+        <p class="vip-text">احتفظ ببطاقتك واستفد من خدمات ومزايا مركز إقرأ التعليمية.</p>
+        <p class="vip-note">تُمنح بطاقة VIP بعد اعتمادها من إدارة مركز إقرأ، وتخضع المزايا لشروط المركز.</p>
+      </div>
+    </section>
+
+    <!-- ============ 6) Gallery ============ -->
+    <section class="section section-light" id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="gallery-title">معرضنا</h2>
+        </div>
+        <ul class="gallery">
+          <li><img src="assets/images/gallery-1-bookshelves.jpg" alt="رفوف مكتبة ممتلئة بالكتب بإضاءة دافئة" width="800" height="600" loading="lazy" decoding="async"></li>
+          <li><img src="assets/images/gallery-2-open-books.jpg" alt="كتب مفتوحة وقلم على طاولة الدراسة" width="800" height="600" loading="lazy" decoding="async"></li>
+          <li><img src="assets/images/gallery-3-classroom.jpg" alt="أطفال يتعلّمون ويكتبون داخل صف دراسي" width="800" height="600" loading="lazy" decoding="async"></li>
+          <li><img src="assets/images/gallery-4-online-learning.jpg" alt="حاسوب محمول ودفتر على مكتب للتعلّم عن بُعد" width="800" height="600" loading="lazy" decoding="async"></li>
+          <li><img src="assets/images/gallery-5-learning-basics.jpg" alt="كتب وتفاحة ومكعبات حروف وأقلام تلوين" width="800" height="600" loading="lazy" decoding="async"></li>
+          <li><img src="assets/images/gallery-6-study-group.jpg" alt="طلاب يدرسون معًا باستخدام الحواسيب المحمولة" width="800" height="600" loading="lazy" decoding="async"></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 7) Contact + booking form ============ -->
+    <section class="section section-dark has-pattern" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="contact-title">تواصل معنا</h2>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <ul class="contact-list">
+              <li>
+                <span class="contact-icon" aria-hidden="true"><svg><use href="#i-phone"/></svg></span>
+                <div>
+                  <span class="contact-label">الهاتف</span>
+                  <a class="contact-value" href="tel:+970595112532" dir="ltr">0595112532</a>
+                </div>
+              </li>
+              <li>
+                <span class="contact-icon" aria-hidden="true"><svg><use href="#i-pin"/></svg></span>
+                <div>
+                  <span class="contact-label">العنوان</span>
+                  <span class="contact-value">خلة الغزال ـ إذنا</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="booking-card" id="booking">
+            <h3 class="booking-title">احجز تقييمًا مجانيًا</h3>
+
+            <form action="https://api.web3forms.com/submit" method="POST" id="booking-form" class="booking-form">
+              <input type="hidden" name="access_key" value="PUT-YOUR-WEB3FORMS-KEY-HERE">
+              <input type="hidden" name="subject" value="طلب تقييم مجاني جديد — مركز إقرأ التعليمي">
+              <input type="hidden" name="from_name" value="موقع مركز إقرأ التعليمي">
+              <!-- Honeypot anti-spam -->
+              <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none !important">
+
+              <div class="form-grid">
+                <div class="field">
+                  <label for="f-name">الاسم الكامل <span class="req" aria-hidden="true">*</span></label>
+                  <input type="text" id="f-name" name="الاسم الكامل" autocomplete="name" required aria-describedby="f-name-error">
+                  <p class="field-error" id="f-name-error"></p>
+                </div>
+                <div class="field">
+                  <label for="f-phone">رقم الجوال <span class="req" aria-hidden="true">*</span></label>
+                  <input type="tel" id="f-phone" name="رقم الجوال" autocomplete="tel" inputmode="tel" required aria-describedby="f-phone-error">
+                  <p class="field-error" id="f-phone-error"></p>
+                </div>
+                <div class="field">
+                  <label for="f-email">البريد الإلكتروني <span class="optional">(اختياري)</span></label>
+                  <input type="email" id="f-email" name="البريد الإلكتروني" autocomplete="email" aria-describedby="f-email-error">
+                  <p class="field-error" id="f-email-error"></p>
+                </div>
+                <div class="field">
+                  <label for="f-program">البرنامج المطلوب</label>
+                  <select id="f-program" name="البرنامج المطلوب">
+                    <option>مواد تعليمية</option>
+                    <option>تسجيل حضوري وعن بُعد</option>
+                    <option>محاضرات إلكترونية</option>
+                    <option>تدريس إلكتروني</option>
+                  </select>
+                </div>
+                <div class="field field-full">
+                  <label for="f-notes">ملاحظات <span class="optional">(اختياري)</span></label>
+                  <textarea id="f-notes" name="ملاحظات" rows="4"></textarea>
+                </div>
+              </div>
+
+              <button class="btn btn-amber btn-block" type="submit">أرسل الطلب</button>
+              <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <a class="brand" href="#home" aria-label="مركز إقرأ التعليمي — الرئيسية">
+        <img src="assets/logo.svg" alt="" width="44" height="44">
+        <span class="brand-name">إقرأ</span>
+      </a>
+
+      <ul class="footer-contact">
+        <li>
+          <svg aria-hidden="true"><use href="#i-phone"/></svg>
+          <span class="visually-hidden">الهاتف:</span>
+          <a href="tel:+970595112532" dir="ltr">0595112532</a>
+        </li>
+        <li>
+          <svg aria-hidden="true"><use href="#i-pin"/></svg>
+          <span class="visually-hidden">العنوان:</span>
+          <span>خلة الغزال ـ إذنا</span>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© <span id="year">2026</span> مركز إقرأ التعليمي — جميع الحقوق محفوظة.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
