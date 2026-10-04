@@ -11,7 +11,10 @@ The booking form emails each request through **[Web3Forms](https://web3forms.com
 /css/styles.css      ← styles (brand colors as CSS variables at the top)
 /js/main.js          ← mobile menu, active nav link, payment link config, form submission
 /assets/             ← logo.svg, favicon.svg, ornaments (pattern/divider/corner .svg)
+/assets/icons/       ← app icons (apple-touch-icon 180, icon 192/512, maskable 512)
 /assets/images/      ← hero + gallery photos
+/favicon.ico         ← 16/32/48/256 px logo icon (tabs, bookmarks, Windows shortcuts)
+/site.webmanifest    ← name + icons used when the site is installed / saved to desktop or home screen
 /.nojekyll           ← empty; tells GitHub Pages to serve files as-is
 /README.md
 ```
@@ -86,6 +89,19 @@ python -m http.server 8000
 - **Images:** replace the files in `assets/images/` (keep the names, or update the `src`). Recommended sizes are 900×1100 for the hero and 800×600 for the gallery.
   Update each image's Arabic `alt` text to describe the new photo.
 - **Footer year:** set automatically from the visitor's clock.
+
+## Site icon (favicon / desktop & home-screen icon)
+
+The logo mark (open book + pencil on dark green) is used everywhere the site is saved:
+
+| Where | File |
+|---|---|
+| Browser tab, bookmarks | `assets/favicon.svg`, `favicon.ico` |
+| Chrome / Edge: **⋮ → Cast, save and share → Install page as app / Create shortcut** (desktop) | `site.webmanifest` → `assets/icons/icon-192.png`, `icon-512.png` |
+| Android: **Add to Home screen** | `site.webmanifest` → `assets/icons/icon-maskable-512.png` |
+| iPhone / iPad: **Share → Add to Home Screen** | `assets/icons/apple-touch-icon.png` |
+
+Browsers cache icons aggressively. After changing them, hard-refresh (Ctrl+F5) or remove and re-add the shortcut to see the new one.
 
 ## Image credits
 
