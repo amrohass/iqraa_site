@@ -12,7 +12,7 @@ The booking form emails each request through **[Web3Forms](https://web3forms.com
 /js/main.js          ← mobile menu, active nav link, payment link config, form submission
 /assets/             ← logo.svg, favicon.svg, ornaments (pattern/divider/corner .svg)
 /assets/icons/       ← app icons (apple-touch-icon 180, icon 192/512, maskable 512)
-/assets/images/      ← hero + gallery photos
+/assets/images/      ← hero + gallery photos, Facebook QR
 /favicon.ico         ← 16/32/48/256 px logo icon (tabs, bookmarks, Windows shortcuts)
 /site.webmanifest    ← name + icons used when the site is installed / saved to desktop or home screen
 /.nojekyll           ← empty; tells GitHub Pages to serve files as-is
@@ -86,9 +86,21 @@ python -m http.server 8000
 
 - **Text:** all copy lives in `index.html`, one commented block per section (Hero, About, Why us, Programs, VIP card, Gallery, Contact, Footer).
 - **Colors:** CSS variables at the top of `css/styles.css` (`--green-900`, `--green-800`, `--gold`, `--gold-light`, `--amber`, `--cream`, `--cream-2`, `--text-dark`, `--text-cream`).
-- **Images:** replace the files in `assets/images/` (keep the names, or update the `src`). Recommended sizes are 900×1100 for the hero and 800×600 for the gallery.
+- **Images:** replace the files in `assets/images/` (keep the names, or update the `src`).
+  Sizes: hero 900×1200 (portrait); gallery tall tiles 600×800 (portrait) and middle tiles 800×600 (landscape).
   Update each image's Arabic `alt` text to describe the new photo.
+  Original phone photos (e.g. `WhatsApp Image ….jpeg`) can be dropped in the project root; `.gitignore` keeps them out of the published site, so commit only the resized copies.
 - **Footer year:** set automatically from the visitor's clock.
+
+## Facebook QR code
+
+The contact card shows the center's Facebook QR (`assets/images/facebook-qr.png`, which decodes to `https://www.facebook.com/share/1E7zoxDuG7/`).
+The QR is also a link to the page (`https://www.facebook.com/profile.php?id=100083045813229`):
+
+- **On a computer:** visitors scan it with their phone camera (hint: «امسح الرمز بكاميرا هاتفك»).
+- **On a phone:** a QR can't be scanned from the same screen, so tapping it opens the page (hint switches to «اضغط على الرمز لزيارة صفحتنا»).
+
+If the page changes, replace the image **and** update the link's `href` in `index.html` (search for `fb-qr`).
 
 ## Site icon (favicon / desktop & home-screen icon)
 
@@ -103,20 +115,16 @@ The logo mark (open book + pencil on dark green) is used everywhere the site is 
 
 Browsers cache icons aggressively. After changing them, hard-refresh (Ctrl+F5) or remove and re-add the shortcut to see the new one.
 
+Dragging the address-bar padlock onto the Windows desktop creates a plain `.url` link file. Windows usually shows the browser's own icon for it, and no website can change that, so use **Create shortcut / Install** above.
+That drag also looks for `favicon.ico` at the **domain root** (`https://amrohass.github.io/favicon.ico`), which is outside this repo.
+With a custom domain (see *Deploy*, step 5) the domain root becomes this repo, and the root `favicon.ico` here is picked up too.
+
 ## Image credits
 
-Photos are from [Unsplash](https://unsplash.com) under the [Unsplash License](https://unsplash.com/license): free for commercial use, no attribution required.
-Source photo IDs:
-
-| File | Unsplash source |
-|---|---|
-| `hero-library.jpg` | `images.unsplash.com/photo-1481627834876-b7833e8f5570` |
-| `gallery-1-bookshelves.jpg` | `images.unsplash.com/photo-1507842217343-583bb7270b66` |
-| `gallery-2-open-books.jpg` | `images.unsplash.com/photo-1456513080510-7bf3a84b82f8` |
-| `gallery-3-classroom.jpg` | `images.unsplash.com/photo-1588072432836-e10032774350` |
-| `gallery-4-online-learning.jpg` | `images.unsplash.com/photo-1501504905252-473c47e087f8` |
-| `gallery-5-learning-basics.jpg` | `images.unsplash.com/photo-1503676260728-1c00da094a0b` |
-| `gallery-6-study-group.jpg` | `images.unsplash.com/photo-1522202176988-66273c2fd55f` |
+- `hero-iqraa-office.jpg`, `gallery-iqraa-desk.jpg`, `gallery-iqraa-wall.jpg`: photos of the center, supplied by the center.
+- `facebook-qr.png`: the center's Facebook QR code, supplied by the center.
+- `gallery-2-open-books.jpg` (`images.unsplash.com/photo-1456513080510-7bf3a84b82f8`) and `gallery-4-online-learning.jpg` (`images.unsplash.com/photo-1501504905252-473c47e087f8`):
+  from [Unsplash](https://unsplash.com) under the [Unsplash License](https://unsplash.com/license) (free for commercial use, no attribution required).
 
 The logo (open book + pencil), icons and geometric ornaments are original SVGs made for this project.
 Fonts: [Tajawal](https://fonts.google.com/specimen/Tajawal) with [Cairo](https://fonts.google.com/specimen/Cairo) as fallback, via Google Fonts (SIL Open Font License).

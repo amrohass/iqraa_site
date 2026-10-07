@@ -878,6 +878,47 @@ svg {
 }
 a.contact-value:hover { color: var(--gold-light); }
 
+/* Facebook QR — scan on desktop, tap on touch devices */
+.fb-qr {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  margin-top: 1.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(201, 162, 39, 0.3);
+  color: var(--text-cream);
+  text-decoration: none;
+}
+.fb-qr-code {
+  flex-shrink: 0;
+  padding: 6px;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 0 0 1.5px var(--gold), 0 10px 24px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
+}
+.fb-qr-code img { width: 124px; height: 124px; border-radius: 8px; }
+.fb-qr-title {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+.fb-qr-hint {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.95rem;
+  color: rgba(247, 241, 227, 0.72);
+}
+.hint-tap { display: none; }
+.fb-qr:hover .fb-qr-code { transform: translateY(-2px); }
+.fb-qr:hover .fb-qr-title { color: var(--gold-light); }
+
+@media (hover: none) and (pointer: coarse) {
+  .hint-scan { display: none; }
+  .hint-tap { display: inline; }
+}
+
 /* Booking card + form */
 .booking-card {
   position: relative;
@@ -1060,6 +1101,7 @@ a.contact-value:hover { color: var(--gold-light); }
   .cards-4 { grid-template-columns: 1fr; }
   .hero-actions .btn { flex: 1 1 100%; }
   .pillars li { width: 100%; }
+  .fb-qr-code img { width: 100px; height: 100px; }
 }
 
 /* ---------- Reduced motion ---------- */
@@ -1074,4 +1116,5 @@ a.contact-value:hover { color: var(--gold-light); }
   .btn:hover,
   .card:hover { transform: none; }
   .gallery li:hover img { transform: none; }
+  .fb-qr:hover .fb-qr-code { transform: none; }
 }
