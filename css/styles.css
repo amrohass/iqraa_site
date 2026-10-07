@@ -795,12 +795,22 @@ svg {
 }
 
 /* ---------- 6) Gallery ---------- */
+/* Bento: the center's own (portrait) photos are tall tiles on both sides,
+   two landscape photos stack in the middle. Areas follow DOM order. */
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "a b d"
+    "a c d";
   gap: clamp(12px, 1.8vw, 22px);
 }
+.gallery li:nth-child(1) { grid-area: a; }
+.gallery li:nth-child(2) { grid-area: b; }
+.gallery li:nth-child(3) { grid-area: c; }
+.gallery li:nth-child(4) { grid-area: d; }
 .gallery li {
+  position: relative;
   overflow: hidden;
   border-radius: var(--radius);
   background: var(--cream);
@@ -810,9 +820,16 @@ svg {
 }
 .gallery img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 2;
   object-fit: cover;
   transition: transform 0.5s ease;
+}
+/* Tall tiles fill both rows without driving the row height */
+.gallery-tall img {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  aspect-ratio: auto;
 }
 .gallery li:hover img { transform: scale(1.05); }
 
@@ -1017,7 +1034,13 @@ a.contact-value:hover { color: var(--gold-light); }
   .cards-3 { grid-template-columns: 1fr; max-width: 520px; margin-inline: auto; }
 
   .contact-grid { grid-template-columns: 1fr; }
-  .gallery { grid-template-columns: repeat(2, 1fr); }
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "a d"
+      "b c";
+  }
+  .gallery-tall img { position: static; aspect-ratio: 3 / 4; }
 }
 
 @media (max-width: 640px) {
